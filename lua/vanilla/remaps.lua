@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- toggles file tree
-vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
+--[[ vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle) ]]
 
 -- allows lines to be moved in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -26,13 +26,13 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- formats (requires a formatter to be installed via :Mason)
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+--[[ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format) ]]
 
 -- search and replace
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- makes current file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = false })
+--[[ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = false }) ]]
 
 -- allows for pane navigation via <C-(h,j,k,l)>
 vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
