@@ -1,58 +1,65 @@
 return {
+
+  -- colourscheme
+  { "EdenEast/nightfox.nvim",          priority = 1000,   lazy = false },
+
   -- fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
+    event = "VeryLazy",
     version = "0.1.1",
     -- or                            , branch = '0.1.x',
     dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 
-  -- colourscheme
-  { "EdenEast/nightfox.nvim",          priority = 1000,   lazy = false },
-
   -- better syntax highlighting
-  { "nvim-treesitter/nvim-treesitter" },
-  { "nvim-treesitter/playground" },
+  { "nvim-treesitter/nvim-treesitter", lazy = true },
+  { "nvim-treesitter/playground",      event = "VeryLazy" },
 
   -- language servers
   {
     "VonHeikemen/lsp-zero.nvim",
+    event = "VeryLazy",
     branch = "v2.x",
     dependencies = {
-      { "neovim/nvim-lspconfig" },
+      { "neovim/nvim-lspconfig",             event = "VeryLazy" },
       {
         "williamboman/mason.nvim",
+        event = "VeryLazy",
         run = function()
           pcall(vim.cmd, "MasonUpdate")
         end,
       },
-      { "williamboman/mason-lspconfig.nvim" },
+      { "williamboman/mason-lspconfig.nvim", event = "VeryLazy" },
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" },
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "L3MON4D3/LuaSnip" },
+      { "hrsh7th/nvim-cmp",                  event = "VeryLazy" },
+      { "hrsh7th/cmp-nvim-lsp",              event = "VeryLazy" },
+      { "L3MON4D3/LuaSnip",                  event = "VeryLazy" },
     },
   },
 
   -- formatting
   {
     "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
     dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 
   -- allow mason and null-ls to talk to eachother
-  { "jay-babu/mason-null-ls.nvim" },
+  { "jay-babu/mason-null-ls.nvim", event = "VeryLazy" },
 
   -- file tree
   {
     "nvim-tree/nvim-tree.lua",
-    dependencies = { { "nvim-tree/nvim-web-devicons" } },
+    event = "VeryLazy",
+    dependencies = { { "nvim-tree/nvim-web-devicons", event = "VeryLazy" } },
   },
 
   -- automatically closes parenthesis, quotes, etc.
   {
     "windwp/nvim-autopairs",
+    event = "VeryLazy",
     config = function()
       require("nvim-autopairs").setup({})
     end,
@@ -61,14 +68,15 @@ return {
   -- add comment capability
   {
     "numToStr/Comment.nvim",
+    event = "VeryLazy",
     dependencies = { { "JoosepAlviste/nvim-ts-context-commentstring" } },
   },
 
   -- change surrounding characters (i.e, ", ', etc.)
-  { "tpope/vim-surround" },
+  { "tpope/vim-surround",          event = "VeryLazy" },
 
   -- change dates quickly
-  { "tpope/vim-speeddating" },
+  { "tpope/vim-speeddating",       event = "VeryLazy" },
 
   -- adds breadcrumbs to winbar
   {
@@ -76,9 +84,9 @@ return {
     version = "*",
     dependencies = {
       "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons", -- optional dependency
+      "nvim-tree/nvim-web-devicons",
+      event = "VeryLazy"                                -- optional dependency
     },
-    after = "nvim-web-devicons",  -- keep this if you're using NvChad
     config = function()
       require("barbecue").setup()
     end,
@@ -87,12 +95,13 @@ return {
   -- status line
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", pt = true },
+    dependencies = { "nvim-tree/nvim-web-devicons", event = "VeryLazy", pt = true },
   },
 
   -- toggleable terminal
   {
     "akinsho/toggleterm.nvim",
+    event = "VeryLazy",
     version = "*",
     config = function()
       require("toggleterm").setup()
@@ -105,6 +114,7 @@ return {
   -- show hex values
   {
     "norcalli/nvim-colorizer.lua",
+    event = "VeryLazy",
     version = "*",
     config = function()
       require("colorizer").setup()
@@ -112,21 +122,18 @@ return {
   },
 
   -- adds an undo tree
-  { "mbbill/undotree" },
+  { "mbbill/undotree",        event = "VeryLazy" },
 
   -- view git changes within a file
   {
-    "lewis6991/gitsigns.nvim"
+    "lewis6991/gitsigns.nvim", event = "VeryLazy"
   },
 
   -- stops yank from moving your cursor
-  { "svban/YankAssassin.vim" },
-
-  -- speeds up startup time
-  { "lewis6991/impatient.nvim" },
+  { "svban/YankAssassin.vim", event = "VeryLazy" },
 
   -- adds tabs
-  { "romgrk/barbar.nvim",      dependencies = "nvim-web-devicons" },
+  { "romgrk/barbar.nvim",     dependencies = "nvim-web-devicons", event = "VeryLazy" },
 
   -- add notifications functionality
   { "rcarriga/nvim-notify" },
