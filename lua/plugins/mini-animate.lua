@@ -17,10 +17,10 @@ return {
       local animate = require("mini.animate")
       return {
         resize = {
-          timing = animate.gen_timing.linear({ duration = 30, unit = "total" }),
+          timing = animate.gen_timing.linear({ duration = 70, unit = "total" }),
         },
         scroll = {
-          timing = animate.gen_timing.linear({ duration = 70, unit = "total" }),
+          timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
           subscroll = animate.gen_subscroll.equal({
             predicate = function(total_scroll)
               if mouse_scrolled then
