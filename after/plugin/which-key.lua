@@ -4,6 +4,8 @@ local builtin = require("telescope.builtin")
 -- vim.lsp.buf.format
 
 wk.register({
+  -- lazy
+  o = { vim.cmd.Lazy, "lazy" },
   -- nvim tree
   e = { vim.cmd.NvimTreeToggle, "file tree" },
   -- formats (requires formatter installed via :Mason)
