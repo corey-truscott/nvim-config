@@ -1,4 +1,4 @@
--- adds configuration for adding plugin installation and sets, remaps, etc.
+-- adds configuration for sets and remaps
 require("vanilla.set")
 require("vanilla.remaps")
 
