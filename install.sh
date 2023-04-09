@@ -14,8 +14,8 @@ preserve_old_config() {
 
 destroy_old_config(){
   echo "deleting old configuration of neovim...\n"
-  rm -rf ~/.config/nvim/*
-  rm -rf ~/.local/share/nvim/*
+  rm -rf ~/.config/nvim/
+  rm -rf ~/.local/share/nvim/
 }
 
 # installs the new configuration
