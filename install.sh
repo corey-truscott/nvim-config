@@ -66,5 +66,6 @@ case $choice in
 esac
 
 # cloning the new configuration 
+sleep 1
 install_new_config
 echo "installation is complete, please enter the \"nvim\" command to install the plugins."
