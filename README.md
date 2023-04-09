@@ -1,5 +1,6 @@
 # nvim-config
 my neovim configuration
+no lazy loading is being done yet so the startup times are slow compared to other configs
 
 # installation script
 it is recommended you use a posix compliant shell to run this such as dash, but it doesnt matter too much.
