@@ -57,7 +57,7 @@ check_installed_pkgs() {
 check_installed_pkgs
 
 # promting for choice
-read -p "Do you want to preserve your current neovim configuration (warning: this is irreversible) (y)yes/(n)no: " choice
+read -p "do you want to preserve your current neovim configuration (warning: this is irreversible) (y)yes/(n)no: " choice
 
 case $choice in
   [yY]* ) echo "preserving configuration\n" && preserve_old_config ;;
