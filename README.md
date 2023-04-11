@@ -3,7 +3,7 @@ my neovim configuration
 
 # dependencies
 these are all probably available in your distrobutions package manager
-* [neovim](https://neovim.io/)
+* [neovim](https://neovim.io/) >= 0.8.0
 * [git](https://github.com/git/git.git)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [xclip](https://github.com/astrand/xclip)/any other clipboard manager (optional)
