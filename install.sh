@@ -19,7 +19,10 @@ destroy_old_config(){
 
 # installs the new configuration
 install_new_config(){
-  echo "cloning git repo..."
+  echo "ensuring required directories exist...\n"
+  mkdir ~/.config/nvim
+  mkdir ~/.local/share/nvim
+  echo "cloning git repo...\n"
   git clone https://github.com/corey-truscott/nvim-config.git ~/.config/nvim
 }
 
