@@ -13,7 +13,7 @@ return {
   },
 
   -- better syntax highlighting
-  { "nvim-treesitter/nvim-treesitter", lazy = true },
+  { "nvim-treesitter/nvim-treesitter" },
   { "nvim-treesitter/playground",      event = "VeryLazy" },
 
   -- language servers
