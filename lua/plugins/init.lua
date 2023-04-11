@@ -19,23 +19,21 @@ return {
   -- language servers
   {
     "VonHeikemen/lsp-zero.nvim",
-    event = "VeryLazy",
     branch = "v2.x",
     dependencies = {
-      { "neovim/nvim-lspconfig",             event = "VeryLazy" },
+      { "neovim/nvim-lspconfig" },
       {
         "williamboman/mason.nvim",
-        event = "VeryLazy",
         run = function()
           pcall(vim.cmd, "MasonUpdate")
         end,
       },
-      { "williamboman/mason-lspconfig.nvim", event = "VeryLazy" },
+      { "williamboman/mason-lspconfig.nvim" },
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp",                  event = "VeryLazy" },
-      { "hrsh7th/cmp-nvim-lsp",              event = "VeryLazy" },
-      { "L3MON4D3/LuaSnip",                  event = "VeryLazy" },
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "L3MON4D3/LuaSnip" },
     },
   },
 
@@ -85,7 +83,7 @@ return {
     dependencies = {
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons",
-      event = "VeryLazy"                                -- optional dependency
+      event = "VeryLazy" -- optional dependency
     },
     config = function()
       require("barbecue").setup()
