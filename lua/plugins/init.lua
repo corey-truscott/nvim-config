@@ -1,5 +1,4 @@
 return {
-
   -- colourscheme
   { "EdenEast/nightfox.nvim",          priority = 1000,   lazy = false },
 
@@ -34,7 +33,7 @@ return {
       {
         "hrsh7th/nvim-cmp",
         version = false,
-        event = "InsertEnter",
+        event = "BufReadPre",
         dependencies = {
           "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip" }
       },
@@ -63,7 +62,7 @@ return {
     "windwp/nvim-autopairs",
     event = "VeryLazy",
     config = function()
-      require("nvim-autopairs").setup({})
+      require("nvim-autopairs").setup(opts)
     end,
   },
 
@@ -71,7 +70,7 @@ return {
   {
     "numToStr/Comment.nvim",
     event = "VeryLazy",
-    dependencies = { { "JoosepAlviste/nvim-ts-context-commentstring" } },
+    dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
   },
 
   -- change surrounding characters (i.e, ", ', etc.)
