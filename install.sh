@@ -53,11 +53,16 @@ check_installed_pkgs() {
     exit
   }
 
+  # check xclip
+  [ $(which xclip) ] ||
+    echo "\nwarning: it is highly recommended that you install xclip before proceeding, although this is optional"
+
 # check if required packages are installed
 check_installed_pkgs
 
 # promting for choice
-read -p "do you want to preserve your current neovim configuration (warning: this is irreversible) (y)yes/(n)no: " choice
+echo "do you want to preserve your current neovim configuration (warning: this is irreversible)"
+read -p "(y)yes/(n)no: " choice
 
 case $choice in
   [yY]* ) echo "preserving configuration\n" && preserve_old_config ;;
