@@ -1,3 +1,7 @@
+-- adds configuration for sets and remaps
+require("vanilla.set")
+require("vanilla.remaps")
+
 -- boostrap lazy :checkhealth lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -21,7 +25,3 @@ vim.g.maplocalleader = " "
 require('lazy').setup('plugins')
 
 -- plugin configurations are contained in after/*.lua
--- adds configuration for sets and remaps
-require("vanilla.set")
-require("vanilla.remaps")
-
