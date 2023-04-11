@@ -57,25 +57,30 @@ check_installed_pkgs() {
   [ $(which xclip) ] ||
     echo "\nwarning: it is highly recommended that you install xclip before proceeding, although this is optional\n"
 
-# check if required packages are installed
-check_installed_pkgs
+install() {
+    # check if required packages are installed
+    check_installed_pkgs
 
-# promting for choice
-echo "do you want to preserve your current neovim configuration (warning: this is irreversible)"
-read -p "(y)yes/(n)no: " choice
+  # promting for choice
+  echo "do you want to preserve your current neovim configuration (warning: this is irreversible)"
+  read -p "(y)yes/(n)no: " choice
 
-case $choice in
-  [yY]* ) echo "preserving configuration\n" && preserve_old_config ;;
-  [nN]* ) echo "deleting old configuration\n" && destroy_old_config ;;
-  *) echo "invalid response, try again.\n" && exit ;;
-esac
+  case $choice in
+    [yY]* ) echo "\npreserving configuration\n" && preserve_old_config ;;
+    [nN]* ) echo "\ndeleting old configuration\n" && destroy_old_config ;;
+    *) echo "invalid response, try again.\n" && exit ;;
+  esac
 
-# cloning the new configuration 
-sleep 1
-install_new_config
+  # cloning the new configuration 
+  sleep 1
+  install_new_config
 
-nvim -c q
+  nvim -c q
 
-echo "\n==============================="
-echo "Installation has been completed"
-echo "===============================\n"
+  clear
+  echo "\n==============================="
+  echo "Installation has been completed"
+  echo "===============================\n"
+}
+
+install
