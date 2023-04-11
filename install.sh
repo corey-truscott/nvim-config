@@ -13,7 +13,6 @@ preserve_old_config() {
 }
 
 destroy_old_config(){
-  echo "deleting old configuration of neovim...\n"
   rm -rf ~/.config/nvim/
   rm -rf ~/.local/share/nvim/
 }
@@ -49,8 +48,6 @@ check_installed_pkgs() {
 
   [ $(which rg) ] ||
     exit
-
-  echo "dependencies are all installed."
   }
 
 # check if required packages are installed
