@@ -5,11 +5,11 @@ local builtin = require("telescope.builtin")
 
 wk.register({
   -- lazy
-  o = { vim.cmd.Lazy, "lazy" },
+  L = { vim.cmd.Lazy, "lazy" },
   -- nvim tree
   e = { vim.cmd.NvimTreeToggle, "file tree" },
   -- formats (requires formatter installed via :Mason)
-  f = { vim.lsp.buf.format, "format" },
+  F = { vim.lsp.buf.format, "format" },
   -- makes current file executable
   x = { "<cmd>!chmod +x %<cr>", "make file executable" },
   -- undotree
@@ -40,5 +40,5 @@ wk.register({
     a = { function() vim.lsp.buf.code_action() end, "code action" },
     f = { function() vim.lsp.buf.references() end, "references" },
     r = { function() vim.lsp.buf.rename() end, "rename" },
-  }
+  },
 }, { prefix = "<leader>" })
