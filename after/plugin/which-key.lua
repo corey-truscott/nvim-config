@@ -8,6 +8,8 @@ wk.register({
   L = { vim.cmd.Lazy, "lazy" },
   -- nvim tree
   e = { vim.cmd.NvimTreeToggle, "file tree" },
+  -- trouble
+  t = { vim.cmd.TroubleToggle, "trouble" },
   -- formats (requires formatter installed via :Mason)
   F = { vim.lsp.buf.format, "format" },
   -- makes current file executable
@@ -40,5 +42,6 @@ wk.register({
     a = { function() vim.lsp.buf.code_action() end, "code action" },
     f = { function() vim.lsp.buf.references() end, "references" },
     r = { function() vim.lsp.buf.rename() end, "rename" },
+    m = { vim.cmd.Mason, "lsp installer" },
   },
 }, { prefix = "<leader>" })
