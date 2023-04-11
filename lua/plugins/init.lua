@@ -13,7 +13,7 @@ return {
   },
 
   -- better syntax highlighting
-  { "nvim-treesitter/nvim-treesitter", version = false, event = { "BufReadPost", "BufNewFile" } },
+  { "nvim-treesitter/nvim-treesitter", version = false,   event = { "BufReadPost", "BufNewFile" } },
   { "nvim-treesitter/playground",      event = "VeryLazy" },
 
   -- language servers
@@ -31,9 +31,13 @@ return {
       { "williamboman/mason-lspconfig.nvim" },
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp", event = "InsertEnter"},
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "L3MON4D3/LuaSnip" },
+      {
+        "hrsh7th/nvim-cmp",
+        version = false,
+        event = "InsertEnter",
+        dependencies = {
+          "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip" }
+      },
     },
   },
 
