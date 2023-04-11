@@ -55,7 +55,7 @@ check_installed_pkgs() {
 
   # check xclip
   [ $(which xclip) ] ||
-    echo "\nwarning: it is highly recommended that you install xclip before proceeding, although this is optional"
+    echo "\nwarning: it is highly recommended that you install xclip before proceeding, although this is optional\n"
 
 # check if required packages are installed
 check_installed_pkgs
