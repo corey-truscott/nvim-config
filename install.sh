@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: backup state/nvim and .cache/nvim
+
 # moves all old configuration files to backup directories
 preserve_old_config() {
   echo "preserving old configuration of neovim...\n"
