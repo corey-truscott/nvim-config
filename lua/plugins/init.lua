@@ -50,19 +50,12 @@ return {
   -- allow mason and null-ls to talk to eachother
   { "jay-babu/mason-null-ls.nvim", event = "VeryLazy" },
 
-  -- file tree
-  {
-    "nvim-tree/nvim-tree.lua",
-    event = "VeryLazy",
-    dependencies = { { "nvim-tree/nvim-web-devicons", event = "VeryLazy" } },
-  },
-
   -- automatically closes parenthesis, quotes, etc.
   {
     "windwp/nvim-autopairs",
     event = "VeryLazy",
     config = function()
-      require("nvim-autopairs").setup(opts)
+      require("nvim-autopairs").setup({})
     end,
   },
 

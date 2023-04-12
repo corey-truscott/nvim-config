@@ -37,7 +37,7 @@ map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
 vim.g.barbar_auto_setup = false -- disable auto-setup
 require'barbar'.setup {
-    auto_hide = true,
+    auto_hide = false,
     animation = true,
     icons = {
         -- Configure the base icons on the bufferline.

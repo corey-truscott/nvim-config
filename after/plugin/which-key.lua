@@ -7,7 +7,7 @@ wk.register({
   -- lazy
   L = { vim.cmd.Lazy, "lazy" },
   -- nvim tree
-  e = { vim.cmd.NvimTreeToggle, "file tree" },
+  e = { vim.cmd.NeoTreeFocusToggle, "file tree" },
   -- trouble
   t = { vim.cmd.TroubleToggle, "trouble" },
   -- formats (requires formatter installed via :Mason)
