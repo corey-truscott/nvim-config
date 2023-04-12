@@ -1,5 +1,6 @@
-# nvim-config
+# nvim
 my neovim configuration
+![source code from dmenu](screenshots/demo.png)
 
 # dependencies
 these are all probably available in your distrobutions package manager
