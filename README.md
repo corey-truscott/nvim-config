@@ -36,9 +36,9 @@ sh <(curl -s https://raw.githubusercontent.com/corey-truscott/nvim-config/main/i
 * lspconfig
 * lualine
 * luasnip
+* mason
 * mason-lspconfig
 * mason-null-ls
-* mason
 * mini.starter
 * navic
 * nightfox
@@ -48,6 +48,7 @@ sh <(curl -s https://raw.githubusercontent.com/corey-truscott/nvim-config/main/i
 * null-ls
 * nvim-tree
 * orgmode
+* persistence
 * playground
 * plenary
 * repeat
