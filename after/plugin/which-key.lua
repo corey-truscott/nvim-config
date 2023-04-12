@@ -8,8 +8,13 @@ wk.register({
   L = { vim.cmd.Lazy, "lazy" },
   -- nvim tree
   e = { vim.cmd.NeoTreeFocusToggle, "file tree" },
-  -- trouble
-  t = { vim.cmd.TroubleToggle, "trouble" },
+  -- trouble and todo comments
+  t = {
+    t = { vim.cmd.TroubleToggle, "trouble" },
+    j = { function() require("todo-comments").jump_next() end, "next todo" },
+    k = { function() require("todo-comments").jump_prev() end, "previous todo" },
+    f = { vim.cmd.TodoTelescope, "todo find" },
+  },
   -- formats (requires formatter installed via :Mason)
   F = { vim.lsp.buf.format, "format" },
   -- makes current file executable
