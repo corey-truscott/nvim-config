@@ -48,20 +48,16 @@ return {
   },
 
   -- allow mason and null-ls to talk to eachother
-  { "jay-babu/mason-null-ls.nvim", event = "VeryLazy" },
+  { "jay-babu/mason-null-ls.nvim",                 event = "VeryLazy" },
 
-  -- add comment capability
-  {
-    "numToStr/Comment.nvim",
-    event = "VeryLazy",
-    dependencies = { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
-  },
+  -- add context based commenting
+  { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
 
   -- change surrounding characters (i.e, ", ', etc.)
-  { "tpope/vim-surround",          event = "VeryLazy" },
+  { "tpope/vim-surround",                          event = "VeryLazy" },
 
   -- change dates quickly
-  { "tpope/vim-speeddating",       event = "VeryLazy" },
+  { "tpope/vim-speeddating",                       event = "VeryLazy" },
 
   -- adds breadcrumbs to winbar
   {

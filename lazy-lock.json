@@ -1,5 +1,4 @@
 {
-  "Comment.nvim": { "branch": "master", "commit": "a89339ffbee677ab0521a483b6dac7e2e67c907e" },
   "LuaSnip": { "branch": "master", "commit": "eb592e4be52fff5a514b7540d5341b55ca4c3226" },
   "YankAssassin.vim": { "branch": "main", "commit": "55ce478a08333c086bcccdf087453085f85854d4" },
   "barbar.nvim": { "branch": "master", "commit": "0a21988ddfe4e63ef4d89332b2a6914dbdbf16ac" },
@@ -14,6 +13,7 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "84d9c35cda573210f237e6e30c5b9036baf85483" },
   "mason-null-ls.nvim": { "branch": "main", "commit": "04fc5094269c4354f0409d515d1d9539a0d076e3" },
   "mason.nvim": { "branch": "main", "commit": "4c3e920c79e0493819ffdd2260d3c79ab1c0a41d" },
+  "mini.comment": { "branch": "main", "commit": "9ead47cef4266efa5145808b838762c658b74f74" },
   "mini.pairs": { "branch": "main", "commit": "771c08bd313614c7e9a1904d277ac76eb226f674" },
   "mini.starter": { "branch": "main", "commit": "52f44482f68424056d4bd4fd1c679d742a0ed92b" },
   "neo-tree.nvim": { "branch": "v2.x", "commit": "2b2f74828eeb02cf29d6b21aa32eedadadc94ca7" },
