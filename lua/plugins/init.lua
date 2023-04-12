@@ -110,9 +110,6 @@ return {
   -- stops yank from moving your cursor
   { "svban/YankAssassin.vim", event = { "BufReadPre", "BufNewFile" } },
 
-  -- adds tabs
-  { "romgrk/barbar.nvim",     dependencies = "nvim-web-devicons",    event = { "BufReadPre", "BufNewFile" } },
-
   -- add notifications functionality
   { "rcarriga/nvim-notify" },
 

@@ -8,7 +8,6 @@ preserve_old_config() {
   echo "moved \"~/.config/nvim\" to \"~/.config/nvim.bak\"\n"
 
   mv ~/.local/share/nvim ~/.local/share/nvim.bak
-  mkdir ~/.local/share/nvim
   echo "moved \"~/.local/share/nvim\" to \"~/.local/share/nvim.bak\""
 }
 
@@ -56,6 +55,10 @@ check_installed_pkgs() {
   # check xclip
   [ $(which xclip) ] ||
     echo "\nwarning: it is highly recommended that you install xclip before proceeding, although this is optional\n"
+
+  # check fd
+  [ $(which fd) ] ||
+    echo "\nwarning: it is highly recommended that you install fd before proceeding, although this is optional\n"
 
 install() {
     # check if required packages are installed
