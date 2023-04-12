@@ -1,5 +1,4 @@
 return {
-	"mattn/emmet-vim",
-  lazy = true,
-  event = "VeryLazy",
+  "mattn/emmet-vim",
+  event = { "BufReadPre", "BufNewFile" },
 }

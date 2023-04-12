@@ -1,6 +1,6 @@
 return {
   -- colourscheme
-  { "EdenEast/nightfox.nvim", lazy = true },
+  { "EdenEast/nightfox.nvim",          lazy = true },
 
   -- fuzzy finder
   {
@@ -8,12 +8,12 @@ return {
     event = "VeryLazy",
     version = "0.1.1",
     -- or                            , branch = '0.1.x',
-    dependencies = { { "nvim-lua/plenary.nvim" } },
+    dependencies = { { "nvim-lua/plenary.nvim", lazy = true } },
   },
 
   -- better syntax highlighting
-  { "nvim-treesitter/nvim-treesitter", version = false,   event = { "BufReadPost", "BufNewFile" } },
-  { "nvim-treesitter/playground",      event = "VeryLazy" },
+  { "nvim-treesitter/nvim-treesitter", version = false },
+  { "nvim-treesitter/playground",      lazy = true },
 
   -- language servers
   {
@@ -23,9 +23,7 @@ return {
       { "neovim/nvim-lspconfig" },
       {
         "williamboman/mason.nvim",
-        run = function()
-          pcall(vim.cmd, "MasonUpdate")
-        end,
+        cmd = "Mason",
       },
       { "williamboman/mason-lspconfig.nvim" },
 
@@ -33,7 +31,6 @@ return {
       {
         "hrsh7th/nvim-cmp",
         version = false,
-        event = "BufReadPre",
         dependencies = {
           "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip" }
       },
@@ -43,21 +40,21 @@ return {
   -- formatting
   {
     "jose-elias-alvarez/null-ls.nvim",
-    event = "VeryLazy",
-    dependencies = { { "nvim-lua/plenary.nvim" } },
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = { { "nvim-lua/plenary.nvim", lazy = true } },
   },
 
   -- allow mason and null-ls to talk to eachother
-  { "jay-babu/mason-null-ls.nvim",                 event = "VeryLazy" },
+  { "jay-babu/mason-null-ls.nvim",                 lazy = true },
 
   -- add context based commenting
   { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
 
   -- change surrounding characters (i.e, ", ', etc.)
-  { "tpope/vim-surround",                          event = "VeryLazy" },
+  { "tpope/vim-surround",                          event = { "BufReadPre", "BufNewFile" } },
 
   -- change dates quickly
-  { "tpope/vim-speeddating",                       event = "VeryLazy" },
+  { "tpope/vim-speeddating",                       event = { "BufReadPre", "BufNewFile" } },
 
   -- adds breadcrumbs to winbar
   {
@@ -65,7 +62,9 @@ return {
     version = "*",
     dependencies = {
       "SmiteshP/nvim-navic",
+      lazy = true,
       "nvim-tree/nvim-web-devicons",
+      lazy = true,
       event = "VeryLazy" -- optional dependency
     },
     config = function()
@@ -76,17 +75,15 @@ return {
   -- status line
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", event = "VeryLazy", pt = true },
+    event = "VeryLazy",
+    dependencies = { "nvim-tree/nvim-web-devicons", lazy = true, pt = true },
   },
 
   -- toggleable terminal
   {
     "akinsho/toggleterm.nvim",
-    event = "VeryLazy",
+    cmd = "ToggleTerm",
     version = "*",
-    config = function()
-      require("toggleterm").setup()
-    end,
   },
 
   -- run snippets within neovim
@@ -95,7 +92,7 @@ return {
   -- show hex values
   {
     "norcalli/nvim-colorizer.lua",
-    event = "VeryLazy",
+    event = { "BufReadPre", "BufNewFile" },
     version = "*",
     config = function()
       require("colorizer").setup()
@@ -103,26 +100,27 @@ return {
   },
 
   -- adds an undo tree
-  { "mbbill/undotree",        event = "VeryLazy" },
+  { "mbbill/undotree",        event = { "BufReadPre", "BufNewFile" } },
 
   -- view git changes within a file
   {
-    "lewis6991/gitsigns.nvim", event = "VeryLazy"
+    "lewis6991/gitsigns.nvim", event = { "BufReadPre", "BufNewFile" }
   },
 
   -- stops yank from moving your cursor
-  { "svban/YankAssassin.vim", event = "VeryLazy" },
+  { "svban/YankAssassin.vim", event = { "BufReadPre", "BufNewFile" } },
 
   -- adds tabs
-  { "romgrk/barbar.nvim",     dependencies = "nvim-web-devicons", event = "VeryLazy" },
+  { "romgrk/barbar.nvim",     dependencies = "nvim-web-devicons",    event = { "BufReadPre", "BufNewFile" } },
 
   -- add notifications functionality
   { "rcarriga/nvim-notify" },
 
-  -- fuzzy finder
+  -- replace command mode, search, etc
   {
     "folke/noice.nvim",
-    dependencies = { { "MunifTanjim/nui.nvim" } },
+    event = "VeryLazy",
+    dependencies = { { "MunifTanjim/nui.nvim", lazy = true } },
   },
 
   -- forces all windows that should be transparent, to be transparent
