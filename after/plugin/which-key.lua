@@ -4,6 +4,8 @@ local builtin = require("telescope.builtin")
 -- vim.lsp.buf.format
 
 wk.register({
+  -- old session
+  S = { function() require("persistence").load() end, "session restore" },
   -- lazy
   L = { vim.cmd.Lazy, "lazy" },
   -- nvim tree
@@ -28,6 +30,8 @@ wk.register({
     f = { builtin.find_files, "find files" },
     -- find buffers
     b = { builtin.buffers, "find buffers" },
+    -- find old files
+    o = { builtin.oldfiles, "find old files" },
     -- grep string search
     s = {
       function()
