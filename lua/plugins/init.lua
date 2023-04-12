@@ -59,13 +59,13 @@ return {
   -- adds breadcrumbs to winbar
   {
     "utilyre/barbecue.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     version = "*",
     dependencies = {
       "SmiteshP/nvim-navic",
       lazy = true,
       "nvim-tree/nvim-web-devicons",
       lazy = true,
-      event = "VeryLazy" -- optional dependency
     },
     config = function()
       require("barbecue").setup()
