@@ -1,5 +1,5 @@
 function setColourscheme(colour)
-    colour = colour or "terafox"
+    colour = colour or "catppuccin-mocha"
     vim.cmd.colorscheme(colour)
 end
 

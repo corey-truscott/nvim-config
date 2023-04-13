@@ -1,6 +1,6 @@
 return {
-  -- colourscheme
-  { "EdenEast/nightfox.nvim",          lazy = true },
+  -- -- colourscheme
+  -- { "EdenEast/nightfox.nvim",          lazy = true },
 
   -- fuzzy finder
   {
