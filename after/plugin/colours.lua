@@ -1,6 +1,12 @@
 function setColourscheme(colour)
-    colour = colour or "catppuccin-mocha"
-    vim.cmd.colorscheme(colour)
+
+  vim.cmd[[
+    let g:everforest_background = 'hard'
+    let g:everforest_better_performance = 1
+  ]]
+
+  colour = colour or "everforest"
+  vim.cmd.colorscheme(colour)
 end
 
 setColourscheme()
