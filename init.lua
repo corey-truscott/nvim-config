@@ -1,6 +1,7 @@
 -- adds configuration for sets and remaps
 require("vanilla.set")
 require("vanilla.remaps")
+require("functions")
 
 -- boostrap lazy :checkhealth lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -23,12 +24,3 @@ vim.g.maplocalleader = " "
 
 -- starts lazy
 require('lazy').setup('plugins')
-
--- install treesitter syntax and lsp servers
-function TSplusLSPinstaller()
-  vim.cmd[[
-    TSUpdate
-    TSInstall all
-    MasonInstall fixjson lua-language-server bash-language-server black clang-format clangd flake8 html-lsp json-lsp pyright rust-analyzer stylua rustfmt
-  ]]
-end
