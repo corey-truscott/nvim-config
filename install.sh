@@ -69,14 +69,18 @@ check_installed_pkgs() {
     echo "\nwarning: it is highly recommended that you install fd before proceeding, although this is optional\n"
 
 install() {
-    # check if required packages are installed
-    check_installed_pkgs
+  # check if required packages are installed
+  check_installed_pkgs
 
-  # promting for choice
+  # promting for choice_a
   echo "do you want to preserve your current neovim configuration (warning: this is irreversible)"
-  read -p "(y)yes/(n)no: " choice
+  read -p "(y)yes/(n)no: " choice_a
 
-  case $choice in
+  # promting for choice_b
+  echo "do you want to install treesitter syntax and LSP servers (warning: this will take several minutes - you will have to leave afterwards manually)"
+  read -p "(y)yes/(n)no: " choice_b
+
+  case $choice_a in
     [yY]* ) echo "\npreserving configuration\n" && preserve_old_config ;;
     [nN]* ) echo "\ndeleting old configuration\n" && destroy_old_config ;;
     *) echo "invalid response, try again.\n" && exit ;;
@@ -87,6 +91,13 @@ install() {
   install_new_config
 
   nvim -c q
+
+  sleep 1
+  case $choice_b in
+    [yY]* ) echo "\ninstalling treesitter syntax and LSP servers...\n" && nvim -c "lua installTSAndLSP()" ;;
+    [nN]* ) continue ;;
+    *) echo "invalid response, try again\n" && exit
+  esac
 
   clear
   echo "\n==============================="
