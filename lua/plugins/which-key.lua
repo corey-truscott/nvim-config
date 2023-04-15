@@ -1,7 +1,6 @@
 return {
   {
     "folke/which-key.nvim",
-    keys = "<space>",
     config = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 200
