@@ -72,4 +72,3 @@ if you want neovim to be transparent, use the command `:TransparentToggle`
 
 # other
 TODO: add info about neorg
-TODO: convert all plugins in after/plugins to lua/plugins to be configured natively in lazy.nvim
