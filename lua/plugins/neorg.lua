@@ -2,6 +2,8 @@ local neorg_path = "~/docs/neorg"
 
 return {
   "nvim-neorg/neorg",
+  cmd = "Neorg",
+  ft = "norg",
   build = ":Neorg sync-parsers",
   opts = {
     load = {
@@ -27,5 +29,5 @@ return {
       },
     },
   },
-  dependencies = { { "nvim-lua/plenary.nvim" } },
+  dependencies = { "nvim-lua/plenary.nvim", lazy = true, },
 }

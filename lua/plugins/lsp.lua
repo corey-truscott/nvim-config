@@ -1,5 +1,6 @@
 return {
   "VonHeikemen/lsp-zero.nvim",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local lsp = require("lsp-zero")
 
@@ -54,19 +55,21 @@ return {
   end,
   branch = "v2.x",
   dependencies = {
-    { "neovim/nvim-lspconfig" },
     {
-      "williamboman/mason.nvim",
-      cmd = "Mason",
+      "neovim/nvim-lspconfig",
+      event = { "BufReadPre", "BufNewFile" },
+      {
+        "williamboman/mason.nvim",
+        cmd = { "Mason", "MasonInstall" },
+      },
+      { "williamboman/mason-lspconfig.nvim", lazy = true },
+      -- Autocompletion
+      {
+        "hrsh7th/nvim-cmp",
+        version = false,
+        dependencies = {
+          "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", },
+      },
     },
-    { "williamboman/mason-lspconfig.nvim" },
-
-    -- Autocompletion
-    {
-      "hrsh7th/nvim-cmp",
-      version = false,
-      dependencies = {
-        "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip" }
-    },
-  },
+  }
 }

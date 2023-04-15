@@ -1,7 +1,7 @@
 return {
     "nvim-telescope/telescope.nvim",
-    event = "VeryLazy",
-    version = "0.1.1",
+    cmd = "Telescope",
+    version = false,
     -- or                            , branch = '0.1.x',
     dependencies = { { "nvim-lua/plenary.nvim", lazy = true } },
   }

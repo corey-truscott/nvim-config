@@ -1,10 +1,10 @@
 return {
   {
     "folke/which-key.nvim",
-    event = 'VeryLazy',
+    keys = "<space>",
     config = function()
       vim.o.timeout = true
-      vim.o.timeoutlen = 150
+      vim.o.timeoutlen = 200
       require("which-key").setup({
         presets = {
           operators = false,

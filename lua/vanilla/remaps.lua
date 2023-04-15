@@ -1,9 +1,6 @@
 -- map leader
 vim.g.mapleader = " "
 
--- shorthand function name
-local keymap = vim.api.nvim_set_keymap
-
 -- toggles file tree
 --[[ vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle) ]]
 
