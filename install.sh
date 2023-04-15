@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# TODO: backup state/nvim and .cache/nvim
-
 # moves all old configuration files to backup directories
 preserve_old_config() {
   echo "preserving old configuration of neovim...\n"
@@ -11,15 +9,23 @@ preserve_old_config() {
 
   mv ~/.local/share/nvim ~/.local/share/nvim.bak
   echo "moved \"~/.local/share/nvim\" to \"~/.local/share/nvim.bak\""
+
+  mv ~/.local/state/nvim ~/.local/state/nvim.bak
+  echo "moved \"~/.local/state/nvim\" to \"~/.local/state/nvim.bak\""
+
+  mv ~/.cache/nvim ~/.cache/nvim.bak
+  echo "moved \"~/.cache/nvim\" to \"~/.cache/nvim.bak\""
 }
 
-destroy_old_config(){
+destroy_old_config() {
   rm -rf ~/.config/nvim/
   rm -rf ~/.local/share/nvim/
+  rm -rf ~/.local/state/nvim
+  rm -rf ~/.cache/nvim
 }
 
 # installs the new configuration
-install_new_config(){
+install_new_config() {
   echo "ensuring required directories exist...\n"
   mkdir ~/.config/nvim
   mkdir ~/.local/share/nvim
