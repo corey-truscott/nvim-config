@@ -1,14 +1,14 @@
 return {
   "echasnovski/mini.comment",
   event = { "BufReadPre", "BufNewFile" },
-  opts = {
-    hooks = {
-      pre = function()
-        require("ts_context_commentstring.internal").update_commentstring({})
-      end,
-    },
+  options = {
+    ignore_blank_line = false,
+    start_of_line = false,
+    pad_comment_parts = true,
   },
-  config = function(_, opts)
-    require("mini.comment").setup(opts)
-  end,
+  mappings = {
+    comment = 'gc',
+    comment_line = 'gcc',
+    textobject = 'gc',
+  },
 }
