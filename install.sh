@@ -94,7 +94,7 @@ install() {
 
   sleep 1
   case $choice_b in
-    [yY]* ) echo "\ninstalling treesitter syntax and LSP servers...\n" && nvim -c "lua installTSAndLSP()" ;;
+    [yY]* ) echo "\ninstalling treesitter syntax and LSP servers...\n" && nvim -c "lua TSplusLSPinstaller()" ;;
     [nN]* ) continue ;;
     *) echo "invalid response, try again\n" && exit
   esac
