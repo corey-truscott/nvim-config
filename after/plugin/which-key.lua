@@ -53,4 +53,8 @@ wk.register({
     r = { function() vim.lsp.buf.rename() end, "rename" },
     m = { vim.cmd.Mason, "lsp installer" },
   },
+  -- open neorg
+  n = {
+    name = "neorg",
+  }
 }, { prefix = "<leader>" })

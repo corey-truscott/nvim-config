@@ -42,3 +42,6 @@ vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
 vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
 vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
+
+vim.keymap.set("n", "<leader>ne", "<cmd>Neorg workspace main<CR>")
+vim.keymap.set("n", "<leader>nr", "<cmd>Neorg return<CR>")

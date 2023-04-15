@@ -46,7 +46,7 @@ vim.opt.updatetime = 50
 vim.opt.clipboard = "unnamedplus"
 
 -- marks conceal level as 0
-vim.opt.conceallevel = 0
+vim.opt.conceallevel = 3
 
 -- encodes files in utf-8
 vim.opt.fileencoding = "utf-8"

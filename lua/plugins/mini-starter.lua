@@ -8,14 +8,14 @@ return {
     "echasnovski/mini.starter",
     event = "VimEnter",
     opts = function()
-    local logo = table.concat({
+      local logo = table.concat({
         [[                                  __]],
         [[     ___     ___    ___   __  __ /\_\    ___ ___]],
         [[    / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\]],
         [[   /\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \]],
         [[   \ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
         [[    \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
-    }, "\n")
+      }, "\n")
       local pad = string.rep(" ", 22)
       local new_section = function(name, action, section)
         return { name = name, action = action, section = pad .. section }
@@ -27,13 +27,13 @@ return {
         evaluate_single = true,
         header = logo,
         items = {
-          new_section("Find file",    "Telescope find_files", "Telescope"),
-          new_section("Recent files", "Telescope oldfiles",   "Telescope"),
-          new_section("Grep text",    "Telescope live_grep",  "Telescope"),
-          new_section("init.lua",     "e $MYVIMRC",           "Config"),
-          new_section("Lazy",         "Lazy",                 "Config"),
-          new_section("New file",     "ene | startinsert",    "Built-in"),
-          new_section("Quit",         "qa",                   "Built-in"),
+          new_section("Find file", "Telescope find_files", "Telescope"),
+          new_section("Recent files", "Telescope oldfiles", "Telescope"),
+          new_section("Grep text", "Telescope live_grep", "Telescope"),
+          new_section("init.lua", "e $MYVIMRC", "Config"),
+          new_section("Lazy", "Lazy", "Config"),
+          new_section("Neorg", "Neorg workspace main", "Notes"),
+          new_section("Quit", "qa", "Built-in"),
           new_section("Session restore", [[lua require("persistence").load()]], "Session"),
         },
         content_hooks = {
@@ -71,4 +71,3 @@ return {
     end,
   },
 }
-

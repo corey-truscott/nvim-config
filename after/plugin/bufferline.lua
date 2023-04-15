@@ -18,4 +18,4 @@ map('n', '<A-7>', '<Cmd>BufferGoToBuffer 7<CR>', opts)
 map('n', '<A-8>', '<Cmd>BufferGoToBuffer 8<CR>', opts)
 map('n', '<A-9>', '<Cmd>BufferGoToBuffer 9<CR>', opts)
 -- Close buffer
-map('n', '<A-c>', '<Cmd>bd<CR>', opts)
+map('n', '<A-c>', '<Cmd>bdelete<CR>', opts)
