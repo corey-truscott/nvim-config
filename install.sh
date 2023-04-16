@@ -76,10 +76,6 @@ install() {
   echo "do you want to preserve your current neovim configuration (warning: this is irreversible)"
   read -p "(y)yes/(n)no: " choice_a
 
-  # promting for choice_b
-  echo "do you want to install treesitter syntax and LSP servers (warning: this will take several minutes - you will have to leave afterwards manually)"
-  read -p "(y)yes/(n)no: " choice_b
-
   case $choice_a in
     [yY]* ) echo "\npreserving configuration\n" && preserve_old_config ;;
     [nN]* ) echo "\ndeleting old configuration\n" && destroy_old_config ;;
@@ -91,13 +87,6 @@ install() {
   install_new_config
 
   nvim -c q
-
-  sleep 1
-  case $choice_b in
-    [yY]* ) echo "\ninstalling treesitter syntax and LSP servers...\n" && nvim -c "lua TSplusLSPinstaller()" ;;
-    [nN]* ) continue ;;
-    *) echo "invalid response, try again\n" && exit
-  esac
 
   clear
   echo "\n==============================="
