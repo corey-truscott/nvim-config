@@ -6,8 +6,11 @@ return {
 
     lsp.preset("recommended")
 
-    -- fix Undefined global 'vim'
-    lsp.configure('lua-language-server', {
+    lsp.ensure_installed({
+      'lua_ls',
+    })
+
+    lsp.configure('lua_ls', {
       settings = {
         Lua = {
           diagnostics = {
@@ -48,7 +51,7 @@ return {
       },
     })
 
-    lsp.on_attach(function(client, bufnr)
+    lsp.on_attach(function(_, bufnr)
       local opts = { buffer = bufnr, remap = false }
 
       vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)

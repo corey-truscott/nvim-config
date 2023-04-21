@@ -8,7 +8,7 @@ return {
   opts = {
     load = {
       ["core.defaults"] = {},
-      ["core.norg.concealer"] = {
+      ["core.concealer"] = {
         config = {
           icons = {
             todo = {
@@ -19,7 +19,7 @@ return {
           },
         },
       },
-      ["core.norg.dirman"] = {
+      ["core.dirman"] = {
         config = {
           workspaces = {
             main = neorg_path,
