@@ -18,6 +18,7 @@
   "mini.comment": { "branch": "main", "commit": "9ead47cef4266efa5145808b838762c658b74f74" },
   "mini.pairs": { "branch": "main", "commit": "771c08bd313614c7e9a1904d277ac76eb226f674" },
   "mini.starter": { "branch": "main", "commit": "52f44482f68424056d4bd4fd1c679d742a0ed92b" },
+  "mini.surround": { "branch": "main", "commit": "cc962bae0890217f8473390abc8cef988519d370" },
   "neo-tree.nvim": { "branch": "v2.x", "commit": "7a6b0d43d70636edfec183fb49c02f725765da73" },
   "neorg": { "branch": "main", "commit": "f742e90d6d8ec831f0bce939c37a3c04407c0e9f" },
   "noice.nvim": { "branch": "main", "commit": "7bd435a48a2d2b3f028c633126e3f669ae6b902f" },
@@ -47,6 +48,5 @@
   "vim-repeat": { "branch": "master", "commit": "24afe922e6a05891756ecf331f39a1f6743d3d5a" },
   "vim-speeddating": { "branch": "master", "commit": "5a36fd29df63ea3f65562bd2bb837be48a5ec90b" },
   "vim-startuptime": { "branch": "master", "commit": "00391e7f86a0fd0ebdb2afdf4336f6712925ce45" },
-  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "which-key.nvim": { "branch": "main", "commit": "94cb020ff33a1e0e22fac1c41663d2c439741f17" }
 }
