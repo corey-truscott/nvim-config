@@ -1,6 +1,5 @@
 return {
   "xiyaowong/transparent.nvim",
-  cmd = "TransparentToggle",
   config = function()
     require("transparent").setup({
       groups = { -- table: default groups
@@ -9,8 +8,6 @@ return {
         'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
         'SignColumn', 'CursorLineNr', 'EndOfBuffer',
       },
-      extra_groups = {}, -- table: additional groups that should be cleared
-      exclude_groups = {}, -- table: groups you don't want to clear
     })
   end
 }

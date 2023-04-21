@@ -4,7 +4,9 @@ return {
   config = function()
     local lsp = require("lsp-zero")
 
-    -- Fix Undefined global 'vim'
+    lsp.preset("recommended")
+
+    -- fix Undefined global 'vim'
     lsp.configure('lua-language-server', {
       settings = {
         Lua = {
@@ -14,8 +16,6 @@ return {
         }
       }
     })
-
-    lsp.preset("recommended")
 
     local cmp = require('cmp')
     local cmp_select = { behavior = cmp.SelectBehavior.Select }

@@ -9,7 +9,7 @@
   "everforest": { "branch": "master", "commit": "4e9104ad9628cd9c95617c5e4c1a99402eb67833" },
   "friendly-snippets": { "branch": "main", "commit": "b1b78a6433268fc172adb5a843e165035e83861e" },
   "gitsigns.nvim": { "branch": "main", "commit": "372d5cb485f2062ac74abc5b33054abac21d8b58" },
-  "lazy.nvim": { "branch": "main", "commit": "86c1a767f041edf62a068c9fe2ea912058521477" },
+  "lazy.nvim": { "branch": "main", "commit": "5c89dc52f42e5058a46b0912d7d9042f564e44e0" },
   "lsp-zero.nvim": { "branch": "v2.x", "commit": "235c005094f80fc1e641ce906f452fb1d71e03b9" },
   "lualine.nvim": { "branch": "master", "commit": "84ffb80e452d95e2c46fa29a98ea11a240f7843e" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "6c8f7afd6162fa27719f9da9792e4314da41c501" },
