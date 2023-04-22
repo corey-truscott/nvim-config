@@ -1,7 +1,7 @@
 -- user options
 
 -- neorg path
-NeorgPath = "~/docs/neorg"
+NeorgPath = "/tmp"
 
 -- transparency 
 Transparent = false
