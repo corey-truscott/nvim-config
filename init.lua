@@ -23,7 +23,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- user options
-dofile("user_opts.lua")
+-- lua/user_opts/init.lua
+require("user_opts")
 
 -- starts lazy
 require('lazy').setup('plugins')

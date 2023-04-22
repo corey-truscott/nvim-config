@@ -1,1 +1,0 @@
-NeorgPath = "~/docs/neorg"

@@ -9,5 +9,9 @@ return {
         'SignColumn', 'CursorLineNr', 'EndOfBuffer',
       },
     })
+
+    if Transparent then
+      vim.cmd.TransparentEnable()
+    end
   end
 }
