@@ -1,7 +1,8 @@
 -- user options
 
 -- neorg path
-NeorgPath = "/tmp"
+NeorgPath = "~/notes"
+os.execute("mkdir -p " .. NeorgPath)
 
 -- transparency 
 Transparent = false
