@@ -1,4 +1,4 @@
-local neorg_path = "~/docs/neorg"
+NeorgPath = NeorgPath
 
 return {
   "nvim-neorg/neorg",
@@ -22,7 +22,7 @@ return {
       ["core.dirman"] = {
         config = {
           workspaces = {
-            main = neorg_path,
+            main = NeorgPath,
           },
           default_workspace = 'main'
         },

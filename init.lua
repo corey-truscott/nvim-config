@@ -22,5 +22,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- user options
+dofile("user_opts.lua")
+
 -- starts lazy
 require('lazy').setup('plugins')
+
