@@ -68,7 +68,7 @@ sh <(curl -s https://raw.githubusercontent.com/corey-truscott/nvim-config/main/i
 </details>
 
 # window transparency
-if you want neovim to be transparent, use the command `:TransparentToggle`
+if you want neovim to be transparent, open neovim without any arguments, press `u` for `user options` and edit `Transparent = false` to `Transparent = true`
 
 # other
 TODO: add info about neorg
