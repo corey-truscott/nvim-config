@@ -10,8 +10,10 @@ return {
       },
     })
 
-    if Transparent then
+    if Transparent == true then
       vim.cmd.TransparentEnable()
+    elseif Transparent == false then
+      vim.cmd.TransparentDisable()
     end
   end
 }
