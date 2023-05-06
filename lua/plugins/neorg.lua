@@ -27,6 +27,11 @@ return {
           default_workspace = 'main'
         },
       },
+      ["core.keybinds"] = {
+        config = {
+          default_keybinds = true,
+        }
+      }
     },
   },
   dependencies = { "nvim-lua/plenary.nvim", lazy = true, },
