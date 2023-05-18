@@ -1,5 +1,5 @@
 # nvim
-my neovim configuration
+
 ![source code from dmenu](screenshots/demo.png)
 
 # dependencies
