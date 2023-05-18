@@ -16,6 +16,8 @@ return {
       -- vim.lsp.buf.format
 
       wk.register({
+        -- quit all
+        q = { "<cmd>qa!<cr>", "quit all" },
         -- old session
         S = { function() require("persistence").load() end, "session restore" },
         -- lazy
