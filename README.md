@@ -6,10 +6,11 @@ my neovim configuration
 these are all probably available in your distrobutions package manager
 * neovim >= 0.8.0
 * git
-* ripgrep 
+* ripgrep
+* fd
 * g++
-* a nerd font *(optional)*
-* xclip/any other clipboard manager *(optional)*
+* a nerd font **(optional)**
+* xclip/any other clipboard manager **(optional)**
 
 # installation script
 it is recommended you use a posix compliant shell to run this such as dash, but it doesnt matter too much.
@@ -17,52 +18,47 @@ it is recommended you use a posix compliant shell to run this such as dash, but 
 sh <(curl -s https://raw.githubusercontent.com/corey-truscott/nvim-config/main/install.sh)
 ```
 
+# colourscheme
+* everforest
+
 # list of plugins
 <details>
   <summary>View list</summary>
 
-* autopairs
-* barbar
+* autotag
 * barbecue
+* bufferline
 * cmp
-* cmp-nvim-lsp
 * colorizer
-* comment
 * dressing
-* emmet
-* fugitive
 * gitsigns
+* illuminate
 * lsp-zero
-* lspconfig
 * lualine
 * luasnip
 * mason
-* mason-lspconfig
-* mason-null-ls
+* mini.comment
+* mini.pairs
 * mini.starter
-* navic
-* nightfox
+* mini.surround
+* neorg
+* neotree
 * noice
 * notify
-* nui
 * null-ls
-* nvim-tree
-* orgmode
 * persistence
-* playground
-* plenary
 * repeat
+* scrollbar
 * speeddating
-* surround
+* startuptime
 * telescope
-* toggleterm
+* todo-comments
 * transparent
 * treesitter
 * trouble
-* ts-context-commentstring
 * undotree
-* web-devicons
-* which key
+* vim-be-good
+* which-key
 * yankassassin
 
 </details>
@@ -71,4 +67,4 @@ sh <(curl -s https://raw.githubusercontent.com/corey-truscott/nvim-config/main/i
 if you want neovim to be transparent, open neovim without any arguments, press `u` for `user options` and edit `Transparent = false` to `Transparent = true`
 
 # other
-TODO: add info about neorg
+- TODO: add info about neorg
