@@ -4,5 +4,5 @@
 NeorgPath = "~/docs/neorg"
 os.execute("mkdir -p " .. NeorgPath)
 
--- transparency 
+-- transparency
 Transparent = false

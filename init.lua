@@ -28,4 +28,3 @@ require("user_opts")
 
 -- starts lazy
 require('lazy').setup('plugins')
-

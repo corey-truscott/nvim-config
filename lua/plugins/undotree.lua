@@ -1,3 +1,3 @@
 return {
-  "mbbill/undotree",        event = { "BufReadPre", "BufNewFile" }
+  "mbbill/undotree", event = { "BufReadPre", "BufNewFile" }
 }
