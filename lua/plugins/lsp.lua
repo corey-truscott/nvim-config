@@ -44,9 +44,9 @@ return {
     lsp.set_preferences({
       suggest_lsp_servers = false,
       sign_icons = {
-        error = '',
+        error = '',
         warn = '',
-        hint = '',
+        hint = '',
         info = '',
       },
     })

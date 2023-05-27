@@ -3,7 +3,6 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   version = false,
   dependencies = {
-    "nvim-treesitter/playground",
     "JoosepAlviste/nvim-ts-context-commentstring",
   },
   config = function()

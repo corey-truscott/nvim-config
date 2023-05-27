@@ -1,6 +1,6 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
-  event = { "BufReadPre", "BufNewFile" },
+  -- event = { "BufReadPre", "BufNewFile" },
   dependencies = { { "nvim-lua/plenary.nvim", lazy = true } },
   config = function()
     local lsp = require("lsp-zero").preset({})
@@ -23,7 +23,7 @@ return {
     -- https://github.com/jay-babu/mason-null-ls.nvim#setup
     require("mason-null-ls").setup({
       ensure_installed = nil,
-      automatic_installation = false, -- You can still set this to `true`
+      automatic_installation = true, -- You can still set this to `true`
       automatic_setup = true,
     })
 

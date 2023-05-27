@@ -8,8 +8,8 @@ return {
       let g:everforest_better_performance = 1
     ]]
 
-      colour = colour or "everforest"
-      vim.cmd.colorscheme(colour)
+      Colour = Colour or "everforest"
+      vim.cmd.colorscheme(Colour)
     end,
   },
 }
