@@ -19,13 +19,48 @@ elseif Tokyonight then
             vim.cmd.colorscheme(Colour)
         end,
     }
-elseif Solarized then
+elseif Gruvbox then
     return {
-        "shaunsingh/solarized.nvim",
-        config = function ()
-            Colour = Colour or "solarized"
+        "ellisonleao/gruvbox.nvim",
+        config = function()
+            vim.cmd [[
+                  set background=dark
+                  ]]
+
+            Colour = Colour or "gruvbox"
+            vim.cmd.colorscheme(Colour)
+        end
+    }
+elseif Onedark then
+    return {
+        "navarasu/onedark.nvim",
+        config = function()
+            Colour = Colour or "onedark"
+            vim.cmd.colorscheme(Colour)
+        end
+    }
+elseif Nord then
+    return {
+        "shaunsingh/nord.nvim",
+        config = function()
+            Colour = Colour or "nord"
+            vim.cmd.colorscheme(Colour)
+        end
+    }
+elseif Dracula then
+    return {
+        "Mofiqul/dracula.nvim",
+        config = function()
+            Colour = Colour or "dracula"
+            vim.cmd.colorscheme(Colour)
+        end
+    }
+elseif Vscode then
+    return {
+        "Mofiqul/vscode.nvim",
+        config = function()
+            Colour = Colour or "vscode"
             vim.cmd.colorscheme(Colour)
         end
     }
 end
-
