@@ -1,6 +1,6 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
-  -- event = { "BufReadPre", "BufNewFile" },
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = { { "nvim-lua/plenary.nvim", lazy = true } },
   config = function()
     local lsp = require("lsp-zero").preset({})
