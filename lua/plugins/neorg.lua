@@ -1,5 +1,9 @@
 NeorgPath = NeorgPath
 
+if (NeorgPath ~= "") then
+    os.execute("mkdir -p " .. NeorgPath)
+end
+
 return {
   "nvim-neorg/neorg",
   cmd = "Neorg",

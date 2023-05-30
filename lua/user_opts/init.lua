@@ -1,12 +1,10 @@
+--
 -- user options
+--
 
 -- neorg path
+-- example: NeorgPath = "~/notes"
 NeorgPath = ""
-
--- TODO: put this in neorg.lua
-if (NeorgPath ~= "") then
-    os.execute("mkdir -p " .. NeorgPath)
-end
 
 -- colourscheme
 -- only set one to true, otherwise mutliple
