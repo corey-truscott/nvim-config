@@ -1,3 +1,3 @@
 return {
-  "svban/YankAssassin.vim", event = { "BufReadPre", "BufNewFile" }
+    "svban/YankAssassin.vim", event = { "BufReadPre", "BufNewFile" }
 }

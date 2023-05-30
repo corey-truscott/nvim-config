@@ -1,4 +1,4 @@
 return {
-  "jay-babu/mason-null-ls.nvim",
-  lazy = true,
+    "jay-babu/mason-null-ls.nvim",
+    lazy = true,
 }

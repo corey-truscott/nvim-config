@@ -9,7 +9,7 @@ NeorgPath = ""
 -- colourscheme
 -- only set one to true, otherwise mutliple
 -- colourschemes will be installed causing startup times to be slower
--- 
+--
 -- if you want another colourscheme added, make a issue on the
 -- github page, although only colourschemes fully supporting
 -- lsp, treesitter, etc will be added

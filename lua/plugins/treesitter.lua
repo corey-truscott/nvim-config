@@ -1,24 +1,24 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPost", "BufNewFile" },
-  version = false,
-  dependencies = {
-    "JoosepAlviste/nvim-ts-context-commentstring",
-  },
-  config = function()
-    require 'nvim-treesitter.configs'.setup {
-      ensure_installed = { "norg" },
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
+    version = false,
+    dependencies = {
+        "JoosepAlviste/nvim-ts-context-commentstring",
+    },
+    config = function()
+        require 'nvim-treesitter.configs'.setup {
+            ensure_installed = { "norg" },
 
-      sync_install = false,
-      auto_install = false,
+            sync_install = false,
+            auto_install = false,
 
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-      },
-      indent = {
-        enable = true
-      }
-    }
-  end
+            highlight = {
+                enable = true,
+                additional_vim_regex_highlighting = false,
+            },
+            indent = {
+                enable = true
+            }
+        }
+    end
 }
