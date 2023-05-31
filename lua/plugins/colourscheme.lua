@@ -63,4 +63,22 @@ elseif Theme == "Vscode" then
             vim.cmd.colorscheme(Colour)
         end
     }
+elseif Theme == "Terafox" then
+    return {
+        "EdenEast/nightfox.nvim",
+        config = function ()
+            Colour = Colour or "terafox"
+            vim.cmd.colorscheme(Colour)
+        end
+    }
+elseif Theme == "Dawnfox" then
+    return {
+        "EdenEast/nightfox.nvim",
+        config = function ()
+            Colour = Colour or "dawnfox"
+            vim.cmd.colorscheme(Colour)
+        end
+    }
+else
+    vim.notify("Invalid theme. Please pick a valid one.")
 end

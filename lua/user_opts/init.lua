@@ -3,6 +3,7 @@
 --
 
 -- neorg path
+-- empty means no path will be made
 -- example: NeorgPath = "~/notes"
 NeorgPath = ""
 
@@ -14,7 +15,8 @@ NeorgPath = ""
 -- alternatively you can edit ~/.config/nvim/lua/plugins/colourscheme.lua
 -- if you know what you are doing
 --
--- Theme = ["Everforest", "Tokyonight", "Gruvbox", "Onedark", "Nord", "Dracula", "Vscode"]
+-- Theme = [ "Everforest", "Tokyonight", "Gruvbox", "Onedark", "Nord",
+--           "Dracula", "Vscode", "Terafox", "Dawnfox" ]
 Theme = "Everforest"
 
 -- transparency
