@@ -1,4 +1,4 @@
-if Everforest then
+if Theme == "Everforest" then
     return {
         "sainnhe/everforest",
         config = function()
@@ -11,7 +11,7 @@ if Everforest then
             vim.cmd.colorscheme(Colour)
         end,
     }
-elseif Tokyonight then
+elseif Theme == "Tokyonight" then
     return {
         "folke/tokyonight.nvim",
         config = function()
@@ -19,7 +19,7 @@ elseif Tokyonight then
             vim.cmd.colorscheme(Colour)
         end,
     }
-elseif Gruvbox then
+elseif Theme == "Gruvbox" then
     return {
         "ellisonleao/gruvbox.nvim",
         config = function()
@@ -31,7 +31,7 @@ elseif Gruvbox then
             vim.cmd.colorscheme(Colour)
         end
     }
-elseif Onedark then
+elseif Theme == "Onedark" then
     return {
         "navarasu/onedark.nvim",
         config = function()
@@ -39,7 +39,7 @@ elseif Onedark then
             vim.cmd.colorscheme(Colour)
         end
     }
-elseif Nord then
+elseif Theme == "Nord" then
     return {
         "shaunsingh/nord.nvim",
         config = function()
@@ -47,7 +47,7 @@ elseif Nord then
             vim.cmd.colorscheme(Colour)
         end
     }
-elseif Dracula then
+elseif Theme == "Dracula" then
     return {
         "Mofiqul/dracula.nvim",
         config = function()
@@ -55,7 +55,7 @@ elseif Dracula then
             vim.cmd.colorscheme(Colour)
         end
     }
-elseif Vscode then
+elseif Theme == "Vscode" then
     return {
         "Mofiqul/vscode.nvim",
         config = function()
